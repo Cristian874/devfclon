@@ -1,0 +1,44 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+.marginuno{
+    margin-right: 5rem;
+}
+.margindos{
+    margin-left: 10rem;
+}
+
+.transparente{
+    border: .1rem solid v.$ColorGris;
+    padding: 1rem ;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    margin-left: 5rem;
+
+    &:hover{
+        background-color: v.$HoverUno;
+                transition-duration: .8s; // Ajusta la duración del hover según sea necesario
+
+    }
+
+}
+
+.morado{
+    background-color: v.$ColorPrincipal;
+    padding: 1rem ;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    transition-property: background-color;
+
+    &:hover{
+        background-color: v.$HoverDos;
+        transition-duration: .8s; // Ajusta la duración del hover según sea necesario
+    }
+  
+}
+
+
+.claro{
+    color: v.$ColorGris;
+}
+

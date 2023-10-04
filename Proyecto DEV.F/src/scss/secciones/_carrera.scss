@@ -1,0 +1,60 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.carrera{
+margin-top: 5rem;
+        background-color: v.$ColorPrincipal;
+    padding: 2rem;
+    border-radius: 2rem;
+  
+    @include m.tablet { 
+        margin-top: -10rem;
+          display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    align-items: center;
+
+        
+     }
+
+
+    &__heading{
+        font-size: 3rem;
+        @include m.tablet {
+            font-size: 5rem; 
+            
+         }
+         @include m.desktop {
+            font-size: 7rem; 
+            
+          }
+    }
+&__img{
+    width: 50%;
+    margin: 0 auto;
+    position: relative; /* Para posicionar la imagen */
+      animation: mover 2s linear infinite; /* Animación llamada 'mover', 2 segundos de duración, linear y se repite infinitamente */
+    
+}
+}
+
+
+  /* Definición de la animación */
+    @keyframes mover {
+      0% {
+        top: 0px; /* Inicialmente, la imagen está a la izquierda */
+        left:0px;
+    }
+      50% {
+        left: 50px;
+        top:50px; /* A la mitad de la animación, la imagen está desplazada 200px a la derecha */
+      }
+      75%{
+        left: 100px;
+        top: 25px;
+      }
+      100% {
+        left:0px;
+        top: 0px; /* Al final de la animación, la imagen vuelve a la posición inicial */
+      }
+    }

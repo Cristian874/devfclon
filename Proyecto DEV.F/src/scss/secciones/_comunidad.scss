@@ -1,0 +1,106 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.comunidad{
+    margin-top: 9rem;
+
+    &__heading{
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__principal{
+        border-radius: 2rem;
+        background-color: v.$ColorNegro;
+       
+        padding:   2rem 2rem 0 2rem;
+
+        @include m.tablet {
+              padding: 5rem 5rem 0 5rem;
+            height: 90rem; 
+            
+         }
+     
+    }
+    &__title{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        @include m.tablet {
+            font-size: 5rem; 
+            width: 55%;
+            
+         }
+    
+    
+        }
+
+    &__texto{
+        margin-bottom: 2rem;
+        @include m.tablet {
+            margin-bottom: 0; 
+            
+         }
+    }
+
+
+    &__imagen{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+   &__img{
+    @include m.tablet {
+        width: 100%; 
+        margin-top: 9rem;
+       
+  
+        
+     }
+     @include m.desktop {
+        margin-top: 8rem; 
+     
+        
+      }
+   }
+
+   &__contenedor{
+    margin-top: 3rem;
+  
+    align-items: center;
+ 
+    @include m.tablet { 
+          display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+        
+     }
+   }
+
+
+   &__card{
+    padding: 2rem;
+       background-color: v.$ColorGris;
+  
+   border-radius: 2rem;
+
+   margin-bottom: 2rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+
+}
+  
+
+   &__subtitle{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    @include m.tablet { 
+        font-size: 4rem;
+        
+     }
+   }
+}

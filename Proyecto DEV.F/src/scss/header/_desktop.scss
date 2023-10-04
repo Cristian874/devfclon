@@ -1,0 +1,25 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+.desktop{
+    display: none;
+   
+    @include m.desktop {
+          
+        display: unset; 
+    
+        
+     }
+
+   &__contenido{
+        padding-top: 2rem;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+
+ 
+   }
+
+ 
+}

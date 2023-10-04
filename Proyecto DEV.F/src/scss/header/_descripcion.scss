@@ -1,0 +1,95 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    margin-top:15rem;
+
+
+
+    &__heading{
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+        
+    @include m.tablet {
+        font-size: 6rem; 
+        
+    }
+  
+    @include m.desktop {
+        font-size: 8rem; 
+        
+     
+    }
+    }
+    &__texto{
+       margin: 3rem 0;
+
+    }
+
+    &__botones{
+
+        @include m.tablet { 
+                   display: flex;
+        justify-content: space-around;
+        gap: 3rem;
+            
+         }
+     
+ 
+    @include m.desktop { 
+           width:70%;
+     }
+    }
+
+    &__boton{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        padding: 2rem;
+        margin-left: 0;
+        &:nth-child(2){
+            margin-top: 2rem;
+              @include m.tablet {
+            margin-top: 0; 
+            
+         }
+        }
+
+      
+
+    }
+
+    &__imagenes{
+
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+        @include m.tablet { 
+               display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem
+        
+         }
+     
+        
+        
+        
+        
+    }
+
+    &__img{
+        width: 50%;
+    }
+}

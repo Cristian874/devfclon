@@ -1,0 +1,38 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.comentarios{
+    margin-top: 9rem;
+
+    &__contenedor{
+
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 2rem; 
+            
+         }
+    }
+
+    &__card{
+        border-radius: 2rem;
+        background-color: v.$ColorAmarillo;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        @include m.tablet {
+            padding: 4rem; 
+            margin-bottom: 0;
+         }
+    }
+
+    &__texto,&__autor{
+        color: v.$ColorNegro;
+        margin-bottom: 2rem;
+    }
+
+    &__autor{
+        font-weight: 700;
+    }
+
+    
+}

@@ -1,0 +1,110 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.metodologia{
+    margin-top: 9rem;
+
+    &__heading{
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__principal{
+        border-radius: 2rem;
+        background-color: v.$ColorAzul;
+       
+        padding:   2rem 2rem 0 2rem;
+
+        @include m.tablet {
+              padding: 5rem 5rem 0 5rem;
+            height: 70rem; 
+            
+         }
+     
+    }
+    &__title{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        @include m.tablet {
+            font-size: 5rem; 
+            width: 50%;
+            
+         }
+    
+    
+        }
+
+    &__texto{
+        margin-bottom: 2rem;
+        @include m.tablet {
+            margin-bottom: 0; 
+            
+         }
+    }
+
+
+    &__imagen{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+   &__img{
+    @include m.tablet {
+        width: 110%; 
+        margin-right: -3rem;
+        margin-top: 10rem;
+        
+     }
+     @include m.desktop {
+        margin-top: 11rem; 
+        margin-right: -4rem;
+        
+      }
+   }
+
+   &__contenedor{
+    margin-top: 3rem;
+  
+    align-items: center;
+ 
+    @include m.tablet { 
+          display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+        
+     }
+   }
+
+
+   &__card{
+    padding: 2rem;
+       background-color: v.$ColorGris;
+   height:40rem;
+   border-radius: 2rem;
+
+   margin-bottom: 2rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   
+
+}
+   &__icono{
+    width: 5rem;
+    background-color: v.$ColorAzul;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+   }
+
+   &__subtitle{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    @include m.tablet { 
+        font-size: 3rem;
+        
+     }
+   }
+}

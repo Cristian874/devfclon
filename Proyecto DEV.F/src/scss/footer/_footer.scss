@@ -1,0 +1,84 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.footer{
+  margin-top: 9rem;
+
+  &__img{
+    width: 10%;
+  }
+
+  &__menu{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    @include m.tablet {
+        
+        grid-template-columns: repeat(4,1fr);
+        gap: 2rem; 
+        
+     }
+     @include m.desktop {
+                grid-template-columns: repeat(6,1fr);
+ 
+        
+      }
+  }
+
+  &__navegacion{
+    margin-top: 2rem;
+    @include m.tablet {
+        margin-top: 0; 
+        
+     }
+   
+  
+  }
+
+  &__link{
+      display: block;
+    color: v.$ColorBlanco;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+     &:nth-child(1){
+        color: v.$ColorLink;
+    }
+      &:hover{
+    color: v.$ColorVerde;
+  }
+  }
+
+
+  &__submenu{
+    margin-top: 9rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+  @include m.tablet {
+    grid-template-columns: repeat(4,1fr);
+
+    
+   }
+  }
+
+  &__bloque{
+    margin-bottom: 2rem;
+  }
+  &__icono{
+    width: 8rem;
+    margin-bottom: 2rem;
+  }
+
+  &__icono--chica{
+    width: 6rem;
+  }
+
+  &__logo{
+    width: 5rem;
+    margin: 2rem 0 ;
+  }
+  &__copy{
+    margin: 5rem 0;
+  }
+
+}

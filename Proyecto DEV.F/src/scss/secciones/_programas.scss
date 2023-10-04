@@ -1,0 +1,103 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.programas{
+
+    margin-top: 9rem;
+
+    &__heading{
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__card{
+     
+        background-color: v.$ColorBlanco;
+        margin-bottom: 3rem;
+        border-radius: 2rem;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        @include m.tablet {
+               height: 60rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem; 
+            
+         }
+         @include m.desktop { 
+            height: 50rem;
+            
+          }
+    }
+
+    &__contenido{
+        padding:  2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title{
+        font-size: 2rem;
+        color: v.$ColorNegro;
+        @include m.tablet {
+            font-size: 4rem; 
+            
+        }
+    }
+    &__texto{
+         color: v.$ColorNegro;
+       
+
+    }
+    &__contenedor{
+        @include m.tablet { 
+                 display: flex;
+        gap: 2rem;
+            
+         }
+   
+    }
+
+    &__duracion{
+        background-color: v.$ColorGris;
+        padding: 1rem;
+        margin: 2rem 0;
+        border-radius: 1rem;
+        text-align: center;
+    }
+   
+  
+    &__boton{
+        color: v.$ColorBlanco;
+        text-decoration: underline;
+        display:flex;
+        justify-content: center;
+        margin:  2rem 0;
+        padding: 1.5rem ;
+        @include m.tablet {
+            width: 70%; 
+            
+         }
+         @include m.desktop { 
+       
+            width: 30%;
+            
+          }
+    }
+
+    &__img{
+        @include m.tablet { 
+            height: 60rem;
+            
+         }
+  @include m.desktop { 
+    height: 50rem;
+    
+   }
+
+    }
+}

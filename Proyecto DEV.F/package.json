@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-dev.f",
+  "version": "1.0.0",
+  "description": "Clon del sitio web de Dev.f",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cristian Omar Guzman Vargas",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.68.0"
+  }
+}

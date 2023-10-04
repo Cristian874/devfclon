@@ -1,0 +1,46 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.mobile{
+
+    padding-top: 2rem;
+
+
+    @include m.desktop {
+        display: none; 
+        
+     }
+    &__contenido{
+          position: fixed;
+          width:95%;
+ 
+    }
+
+     &__iconos{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     margin-bottom: 5rem;
+   
+    }
+     &__icono{
+        width:5rem;
+
+        &:hover{
+            cursor: pointer;
+        }
+        
+            &:nth-child(2) {
+                width: 3rem;
+                padding: .5rem;
+                    background-color: v.$ColorBlanco;
+                }
+     }
+
+     &__navegacion{
+        display: none;
+   
+     }
+
+ 
+}

@@ -1,0 +1,47 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__enlace {
+   
+    color: v.$ColorBlanco;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  &__bloques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  &__bloque{
+    background-color: v.$ColorGris;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+  }
+  &__icono{
+    width: 5rem;
+    margin-bottom: .5rem;
+  }
+
+  &__contenedor{
+    background-color: v.$ColorBlanco;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    height: 10rem;
+  }
+  &__enlace--negro{
+
+    color: v.$ColorNegro;
+  }
+
+}
